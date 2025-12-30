@@ -1,0 +1,111 @@
+/* FONDO GENERAL */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f6e6ff, #ffe6f0);
+    margin: 0;
+    padding: 0;
+    animation: fondo 10s infinite alternate;
+}
+
+/* ANIMACIÓN DEL FONDO */
+@keyframes fondo {
+    from { background-position: left; }
+    to { background-position: right; }
+}
+
+/* CONTENEDOR PRINCIPAL */
+.cv {
+    max-width: 850px;
+    background: #ffffff;
+    margin: 40px auto;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(180, 120, 200, 0.25);
+    animation: aparecer 1.5s ease;
+}
+
+/* ANIMACIÓN DE ENTRADA */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ENCABEZADO */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* FOTO OVALADA */
+.foto img {
+    width: 140px;
+    height: 180px;
+    border-radius: 50% / 40%;
+    object-fit: cover;
+    border: 4px solid #d6a4e3;
+    box-shadow: 0 8px 15px rgba(200, 140, 220, 0.4);
+    transition: transform 0.4s ease;
+}
+
+.foto img:hover {
+    transform: scale(1.05);
+}
+
+/* DATOS PERSONALES */
+h1 {
+    margin: 0;
+    font-size: 32px;
+    color: #8b5fbf;
+}
+
+.titulo {
+    color: #c77dbb;
+    font-weight: bold;
+}
+
+.info p {
+    margin: 4px 0;
+    color: #5e4a6e;
+}
+
+/* SECCIONES */
+section {
+    margin-top: 25px;
+    animation: deslizar 1s ease;
+}
+
+/* ANIMACIÓN SECCIONES */
+@keyframes deslizar {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* TÍTULOS */
+h2 {
+    color: #c77dbb;
+    border-bottom: 3px solid #f2c6de;
+    padding-bottom: 6px;
+}
+
+/* TEXTO */
+p, li {
+    color: #5e4a6e;
+    line-height: 1.7;
+}
+
+ul {
+    padding-left: 20px;
+}
